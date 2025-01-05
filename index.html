@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jesus Saves Apparel</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+       body {
+    margin: 0;
+    font-family: 'Lora', serif;
+    color: #1a1a1a;
+    background-color: #faf9f6;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(90deg, #ffffff, #e8e8e8);
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    color: #2c3e50;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #34495e;
+    font-size: 1rem;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the products */
+    gap: 20px; /* Adjust the gap between products */
+}
+
+.product {
+    width: 45%; /* Adjust the width to align two products horizontally */
+    margin-bottom: 20px; /* Adjust the margin as needed */
+    box-sizing: border-box;
+}
+
+.cta {
+    display: inline-block;
+    margin: 15px 0;
+    padding: 10px 20px;
+    background-color: #5c6bc0;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.cta:hover {
+    background-color: #3949ab;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .product {
+        width: 100%; /* Full width for mobile devices */
+        margin-bottom: 10px;
+    }
+
+    header {
+        padding: 5px 15px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul li a {
+        font-size: 0.875rem;
+    }
+
+    .cta {
+        border: none; /* Remove the line crossing over the CTA */
+    }
+
+    section {
+        margin: 10px 0; /* Adjust the margin as needed */
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        cursor: pointer;
+        flex-direction: column;
+        gap: 5px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .mobile-menu.show {
+        display: block;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Jesus Saves Apparel</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h2>Faith-Inspired Apparel for Everyone</h2>
+        <p>Discover timeless designs that reflect your beliefs with style.</p>
+        <a href="shop.html" class="cta-button">Shop Now</a>
+    </div>
+
+    <div class="scripture">
+        <h4>Go therefore and make disciples of all the nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit</h4>
+        <p>Matthew 28:19</p>
+    </div>
+
+    <section class="product-grid">
+        <div class="product">
+            <img src="path-to-image1.jpg" alt="Product 1">
+            <h5>Product Name 1</h5>
+            <p>$Price</p>
+            <a href="product-1.html" class="cta">Buy Now</a>
+        </div>
+        <div class="product">
+            <img src="path-to-image2.jpg" alt="Product 2">
+            <h5>Product Name 2</h5>
+            <p>$Price</p>
+            <a href="#" class="cta">Buy Now</a>
+        </div>
+        <!-- Repeat for more products -->
+    </section>
+
+
+    <div class="testimonials">
+        <h3>What Our Customers Say</h3>
+        <p>"Absolutely love the designs! They speak to my faith and style."</p>
+        <p>"A beautiful way to share the message of Christ through fashion."</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Jesus Saves Apparel. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('hamburger-menu').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.toggle('show');
+        });
+    </script>
+
+</body>
+
+</html>

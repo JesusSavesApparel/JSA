@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Lora', serif;
+            color: #1a1a1a;
+            background-color: #faf9f6;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(90deg, #ffffff, #e8e8e8);
+            padding: 10px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            color: #2c3e50;
+            font-size: 2rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #34495e;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #5c6bc0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .form-group small {
+            display: block;
+            margin-top: 5px;
+            color: #888;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background-color: #5c6bc0;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: #3949ab;
+            transform: scale(1.05);
+        }
+
+        .payment-methods {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .payment-methods label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .payment-methods input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .payment-image {
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .phone-input {
+            display: flex;
+            gap: 10px;
+        }
+
+        .phone-input select {
+            width: auto; /* Adjust width to fit the content */
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .phone-input input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .order-summary {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .order-summary h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .order-summary ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .order-summary ul li {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .order-summary ul li span {
+            font-weight: bold;
+        }
+
+        .order-summary .total {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 10px;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+        }
+
+        footer {
+            background-color: #1a237e;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+            font-family: 'Lora', serif;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 5px 15px;
+            }
+
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            nav ul li a {
+                font-size: 0.875rem;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .cta-button {
+                width: 100%;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Jesus Saves Apparel</h1>
+        <nav>
+            <ul class="mobile-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+                <ul id="order-summary-list">
+                    <!-- Order items will be dynamically inserted here -->
+                </ul>
+                <div class="total">
+                    <span>Total</span>
+                    <span id="order-total">$0.00</span>
+                </div>
+            </div>
+            <h2>Billing Address</h2>
+            <form action="https://formspree.io/f/{your-form-id}" method="POST">
+                <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <select id="country" name="country" required>
+                        <option value="">Select a country</option>
+                        <option value="Afghanistan">Afghanistan</option>
+                        <option value="Albania">Albania</option>
+                        <option value="Algeria">Algeria</option>
+                        <!-- Add all other countries here -->
+                        <option value="Zimbabwe">Zimbabwe</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="address-line-1">Address Line 1</label>
+                    <input type="text" id="address-line-1" name="address-line-1" required>
+                </div>
+                <div class="form-group">
+                    <label for="address-line-2">Address Line 2</label>
+                    <input type="text" id="address-line-2" name="address-line-2">
+                </div>
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" required>
+                    <small>Please input a valid city name</small>
+                </div>
+                <div class="form-group">
+                    <label for="zip">Zip / Postcode</label>
+                    <input type="text" id="zip" name="zip" required>
+                </div>
+                <div class="form-group">
+                    <label for="mobile-phone">Mobile Phone</label>
+                    <div class="phone-input">
+                        <select id="country-code" name="country-code" required>
+                            <option value="+1">USA (+1)</option>
+                            <option value="+44">UK (+44)</option>
+                            <option value="+27">SA (+27)</option>
+                            <option value="+91">India (+91)</option>
+                            <!-- Add more country codes here -->
+                        </select>
+                        <input type="tel" id="mobile-phone" name="mobile-phone" required>
+                    </div>
+                </div>
+                <h2>Payment Information</h2>
+                <div class="form-group">
+                    <label for="payment-method">Payment Method</label>
+                    <div class="payment-methods">
+                        <label>
+                            <input type="radio" name="payment-method" value="mastercard" required>
+                            <img src="Mastercard.png" alt="Mastercard" class="payment-image">
+                        </label>
+                        <label>
+                            <input type="radio" name="payment-method" value="visa" required>
+                            <img src="C:/Users/Gerrie/Documents/JSA/Images/Visa.png" alt="Visa" class="payment-image">
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="card">Credit Card Number</label>
+                    <input type="text" id="card" name="card" required>
+                </div>
+                <div class="form-group">
+                    <label for="expiry">Expiry Date</label>
+                    <input type="text" id="expiry" name="expiry" required>
+                </div>
+                <div class="form-group">
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" name="cvv" required>
+                </div>
+                <button type="submit" class="cta-button">Place Order</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Jesus Saves Apparel. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('hamburger-menu').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.toggle('show');
+        });
+
+        // Example cart data
+        const cartItems = [
+            { name: 'Product 1', price: 10.00 },
+            { name: 'Product 2', price: 20.00 }
+        ];
+
+        function updateOrderSummary() {
+            const orderSummaryList = document.getElementById('order-summary-list');
+            const orderTotal = document.getElementById('order-total');
+            let total = 0;
+
+            // Clear existing items
+            orderSummaryList.innerHTML = '';
+
+            // Add items to the order summary
+            cartItems.forEach(item => {
+                const li = document.createElement('li');
+                li.innerHTML = `<span>${item.name}</span><span>$${item.price.toFixed(2)}</span>`;
+                orderSummaryList.appendChild(li);
+                total += item.price;
+            });
+
+            // Update total
+            orderTotal.textContent = `$${total.toFixed(2)}`;
+        }
+
+        // Update order summary on page load
+        document.addEventListener('DOMContentLoaded', updateOrderSummary);
+    </script>
+</body>
+</html>
