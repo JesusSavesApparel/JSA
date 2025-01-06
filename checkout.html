@@ -354,39 +354,6 @@
         <p>&copy; 2024 Jesus Saves Apparel. All Rights Reserved.</p>
     </footer>
 
-    <script>
-        document.getElementById('hamburger-menu').addEventListener('click', function() {
-            document.querySelector('.mobile-menu').classList.toggle('show');
-        });
 
-        // Example cart data
-        const cartItems = [
-            { name: 'Product 1', price: 10.00 },
-            { name: 'Product 2', price: 20.00 }
-        ];
-
-        function updateOrderSummary() {
-            const orderSummaryList = document.getElementById('order-summary-list');
-            const orderTotal = document.getElementById('order-total');
-            let total = 0;
-
-            // Clear existing items
-            orderSummaryList.innerHTML = '';
-
-            // Add items to the order summary
-            cartItems.forEach(item => {
-                const li = document.createElement('li');
-                li.innerHTML = `<span>${item.name}</span><span>$${item.price.toFixed(2)}</span>`;
-                orderSummaryList.appendChild(li);
-                total += item.price;
-            });
-
-            // Update total
-            orderTotal.textContent = `$${total.toFixed(2)}`;
-        }
-
-        // Update order summary on page load
-        document.addEventListener('DOMContentLoaded', updateOrderSummary);
-    </script>
 </body>
 </html>
