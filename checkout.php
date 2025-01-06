@@ -27,7 +27,7 @@ function calculateTotal($cartItems) {
     return $total;
 }
 
-// Assume $_SESSION['cart'] contains items in the form of ['name' => 'Product Name', 'price' => price]
+// Assume $_SESSION['cart'] contains items in the form of ['id' => product_id, 'name' => 'Product Name', 'price' => price]
 $cartItems = $_SESSION['cart'] ?? [];
 
 // Verify and update cart items with the latest product information
