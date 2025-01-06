@@ -1,7 +1,24 @@
 <?php
 session_start();
 
-// Function to calculate total price
+// Function to fetch the latest product information from the database
+function fetchProductInfo($productName) {
+    // Example database connection and query (replace with your actual database logic)
+    $conn = new mysqli('localhost', 'username', 'password', 'database');
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    $stmt = $conn->prepare('SELECT name, price FROM products WHERE name = ?');
+    $stmt->bind_param('s', $productName);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $product = $result->fetch_assoc();
+    $stmt->close();
+    $conn->close();
+    return $product;
+}
+
+// Function to calculate the total price of the cart items
 function calculateTotal($cartItems) {
     $total = 0;
     foreach ($cartItems as $item) {
@@ -12,6 +29,16 @@ function calculateTotal($cartItems) {
 
 // Assume $_SESSION['cart'] contains items in the form of ['name' => 'Product Name', 'price' => price]
 $cartItems = $_SESSION['cart'] ?? [];
+
+// Verify and update cart items with the latest product information
+foreach ($cartItems as &$item) {
+    $latestProductInfo = fetchProductInfo($item['name']);
+    if ($latestProductInfo) {
+        $item['price'] = $latestProductInfo['price'];
+    }
+}
+unset($item); // Break the reference with the last element
+
 $total = calculateTotal($cartItems);
 ?>
 
