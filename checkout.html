@@ -355,10 +355,35 @@
     </footer>
 
     <script>
- document.getElementById('hamburger-menu').addEventListener('click', function() {
-    document.querySelector('.mobile-menu').classList.toggle('show');
-});
-   </script>
+        document.getElementById('hamburger-menu').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.toggle('show');
+        });
+
+        // Function to render the order summary
+        function renderOrderSummary() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const orderSummaryList = document.getElementById('order-summary-list');
+            const orderTotal = document.getElementById('order-total');
+            let total = 0;
+
+            orderSummaryList.innerHTML = '';
+
+            cart.forEach(item => {
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `
+                    <span>${item.name} (x${item.quantity})</span>
+                    <span>$${(item.price * item.quantity).toFixed(2)}</span>
+                `;
+                orderSummaryList.appendChild(listItem);
+                total += item.price * item.quantity;
+            });
+
+            orderTotal.textContent = `$${total.toFixed(2)}`;
+        }
+
+        // Call the function to render the order summary on page load
+        document.addEventListener('DOMContentLoaded', renderOrderSummary);
+    </script>
     <script src="cart.js"></script>
 </body>
 </html>
