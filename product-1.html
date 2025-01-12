@@ -6,124 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product 1 - Jesus Saves Apparel</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Lora', serif;
-            color: #1a1a1a;
-            background-color: #faf9f6;
-            line-height: 1.6;
-        }
-
-        header {
-            background: linear-gradient(90deg, #ffffff, #e8e8e8);
-            padding: 10px 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        header h1 {
-            color: #2c3e50;
-            font-size: 2rem;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-
-        nav ul li {
-            margin: 0 10px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #34495e;
-            font-size: 1rem;
-        }
-
-        .container {
-            padding: 20px;
-        }
-
-        .product-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .product-image {
-            max-width: 100%;
-        }
-
-        .cta-button {
-            display: inline-block;
-            margin: 15px 0;
-            padding: 10px 20px;
-            background-color: #5c6bc0;
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: bold;
-            border-radius: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease, transform 0.2s;
-        }
-
-        .cta-button:hover {
-            background-color: #3949ab;
-            transform: scale(1.05);
-        }
-
-        .cart-icon {
-            position: relative;
-            display: inline-block;
-            cursor: pointer;
-            margin-left: 20px;
-        }
-
-        .cart-icon img {
-            width: 30px;
-            height: 30px;
-        }
-
-        .cart-count {
-            position: absolute;
-            top: -10px;
-            right: -10px;
-            background-color: red;
-            color: white;
-            border-radius: 50%;
-            padding: 5px 10px;
-            font-size: 0.8rem;
-            font-weight: bold;
-        }
-    </style>
 </head>
 
 <body>
     <header>
         <h1>Jesus Saves Apparel</h1>
         <nav>
-            <ul class="mobile-menu">
+            <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about-us.html">About Us</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
             <div class="cart-icon" onclick="window.location.href='cart.html'">
-                <img src="cart icon.png" alt="Cart">
+                <img src="cart-icon.png" alt="Cart">
                 <div class="cart-count" id="cart-count">0</div>
             </div>
         </nav>
@@ -133,9 +29,9 @@
         <section class="product-section">
             <img src="path-to-image1.jpg" alt="Faith Hoodie - Jesus Saves Apparel" class="product-image">
             <h2>Faith Hoodie</h2>
-            <p>$29.99</p>
+            <p class="price">$29.99</p>
             <button class="cta-button add-to-cart" data-id="1" data-name="Faith Hoodie" data-price="29.99">Add to Cart</button>
-            <p>Product description goes here. It provides details about the product.</p>
+            <p class="description">Product description goes here. It provides details about the product.</p>
             <div class="selection">
                 <label for="color">Color:</label>
                 <select id="color">
