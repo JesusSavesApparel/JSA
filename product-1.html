@@ -22,6 +22,7 @@
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
         }
 
         header h1 {
@@ -104,13 +105,15 @@
             display: none;
             position: absolute;
             top: 70px;
-            right: 20px;
+            right: 0;
             background-color: #ffffff;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             list-style: none;
             padding: 10px 20px;
             border-radius: 5px;
             z-index: 1000;
+            width: 100%;
+            max-width: 300px;
         }
 
         .mobile-menu li {
@@ -160,7 +163,7 @@
                 <span></span>
             </div>
         </nav>
-        <ul class="mobile-menu">
+        <ul class="mobile-menu" id="mobile-menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="about-us.html">About Us</a></li>
             <li><a href="shop.html">Shop</a></li>
@@ -209,7 +212,7 @@
         document.addEventListener('DOMContentLoaded', updateCartCount);
 
         document.getElementById('hamburger-menu').addEventListener('click', function() {
-            document.querySelector('.mobile-menu').classList.toggle('show');
+            document.getElementById('mobile-menu').classList.toggle('show');
         });
     </script>
 </body>
