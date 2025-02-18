@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>About Us - Jesus Saves Apparel</title>
     <style>
         body {
             margin: 0;
@@ -14,46 +14,44 @@
             line-height: 1.8;
         }
 
-        header {
-            background: linear-gradient(90deg, #ffffff, #e8e8e8);
-            padding: 10px 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+header {
+    background: linear-gradient(90deg, #ffffff, #e8e8e8);
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-        header h1 {
-            color: #2c3e50;
-            font-size: 2.2rem;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
+header h1 {
+    color: #2c3e50;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
 
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
 
-        nav ul li {
-            margin: 0 15px;
-        }
+nav ul li {
+    margin: 0 10px;
+}
 
-        nav ul li a {
-            text-decoration: none;
-            color: #34495e;
-            font-size: 1rem;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
+nav ul li a {
+    text-decoration: none;
+    color: #34495e;
+    font-size: 1rem;
+}
 
         nav ul li a:hover {
             color: #007acc;
         }
 
-        .hero {
+        .about-hero {
             text-align: center;
             padding: 100px 20px;
             background: linear-gradient(135deg, #e6f7ff, #f2e6ff);
@@ -61,7 +59,7 @@
             clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
         }
 
-        .hero h2 {
+        .about-hero h2 {
             font-size: 3.5rem;
             margin-bottom: 20px;
             color: #1a237e;
@@ -69,29 +67,27 @@
             font-family: 'Playfair Display', serif;
         }
 
-        .hero p {
+        .about-hero p {
             font-size: 1.3rem;
             margin-bottom: 30px;
             color: #5c6bc0;
         }
 
-        .cta-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 15px 40px;
-            background-color: #5c6bc0;
-            color: #ffffff;
-            text-decoration: none;
+        .content {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #2c3e50;
+            text-align: justify;
             font-size: 1.2rem;
-            font-weight: bold;
-            border-radius: 30px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease, transform 0.2s;
         }
 
-        .cta-button:hover {
-            background-color: #3949ab;
-            transform: scale(1.05);
+        .content img {
+            width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         footer {
@@ -107,103 +103,48 @@
             font-size: 1rem;
             font-family: 'Lora', serif;
         }
-
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #ffffff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-
-        .contact-form h3 {
-            text-align: center;
-            color: #1a237e;
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-
-        .contact-form label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-            color: #34495e;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #d6d6d6;
-            border-radius: 4px;
-            font-size: 1rem;
-        }
-
-        .contact-form textarea {
-            resize: none;
-            height: 150px;
-        }
-
-        .contact-form button {
-            display: inline-block;
-            padding: 10px 40px;
-            background-color: #5c6bc0;
-            color: #ffffff;
-            font-size: 1.2rem;
-            font-weight: bold;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .contact-form button:hover {
-            background-color: #3949ab;
-        }
     </style>
 </head>
 
 <body>
-
     <header>
-        <h1>Contact Us</h1>
+        <h1>Jesus Saves Apparel</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="#">About Us</a></li>
                 <li><a href="shop.html">Shop</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero">
-        <h2>Get in Touch</h2>
-        <p>We'd love to hear from you! Fill out the form below to contact us.</p>
-    </section>
+    <div class="about-hero">
+        <h2>About Us</h2>
+        <p>Sharing faith through fashion, one design at a time.</p>
+    </div>
 
-    <section class="contact-form">
-        <h3>Contact Form</h3>
-        <form action="mailto:jesussavesapparel7@gmail.com" method="post" enctype="text/plain">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+    <div class="content">
+        <p>Welcome to Jesus Saves Apparel, a brand that merges faith and fashion in a way that’s fresh, modern, and
+            meaningful. Our mission is to create clothing that not only looks good but also serves as a beacon of hope
+            and inspiration for others.</p>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+        <p>Established in 2024, we aim to craft high-quality apparel that resonates with your beliefs. From elegant
+            designs featuring scripture to bold statements of faith, every piece is thoughtfully created to reflect your
+            walk with Christ.</p>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
+        <p>We believe that faith is not just a Sunday thing—it’s an every day thing. That’s why our collection is
+            versatile and suitable for any occasion, allowing you to share your faith wherever you go. Whether you’re
+            looking for a casual tee or a gift for a loved one, Jesus Saves Apparel has something special for everyone.
+        </p>
 
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+        <p>Thank you for choosing to be a part of our journey. Together, let’s wear our faith proudly and share His
+            message with the world.</p>
+    </div>
 
     <footer>
-        <p>&copy; 2024 Your Company. All Rights Reserved.</p>
+        <p>&copy; 2024 Jesus Saves Apparel. All Rights Reserved.</p>
     </footer>
-
 </body>
 
 </html>
