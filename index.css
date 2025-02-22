@@ -84,6 +84,10 @@ nav ul li a:hover {
 .hero {
     text-align: center;
     margin-bottom: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
 }
 
 .hero h2 {
@@ -108,7 +112,7 @@ nav ul li a:hover {
     font-size: 1.2rem;
     font-weight: bold;
     border-radius: 30px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adjusted shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added shadow */
     transition: background-color 0.3s ease, transform 0.2s;
 }
 
@@ -175,7 +179,7 @@ nav ul li a:hover {
     font-size: 1rem;
     font-weight: bold;
     border-radius: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adjusted shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added shadow */
     transition: background-color 0.3s ease, transform 0.2s;
 }
 
@@ -287,7 +291,7 @@ footer p {
     .cta-button {
         padding: 10px 20px;
         font-size: 1rem;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adjusted shadow */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added shadow */
     }
 
     .product {
@@ -306,7 +310,7 @@ footer p {
     .product .cta {
         padding: 8px 16px;
         font-size: 0.9rem;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adjusted shadow */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added shadow */
     }
 }
 
@@ -330,7 +334,7 @@ footer p {
     .cta-button {
         padding: 20px 40px; /* Increase padding for larger screens */
         font-size: 1.5rem; /* Increase font size for larger screens */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adjusted shadow */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added shadow */
     }
 
     .product {
@@ -348,6 +352,6 @@ footer p {
     .product .cta {
         padding: 12px 24px; /* Increase padding for larger screens */
         font-size: 1.2rem; /* Increase font size for larger screens */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adjusted shadow */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added shadow */
     }
 }
