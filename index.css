@@ -55,7 +55,7 @@ nav ul li a:hover {
     display: inline-block;
     cursor: pointer;
     margin-left: 20px;
-    margin-right: 10px; /* Add margin to the right to create space from the mobile menu */
+    margin-right: 20px; /* Increase margin to the right to create more space from the mobile menu */
 }
 
 .cart-icon img {
@@ -257,12 +257,12 @@ footer p {
     }
 
     header h1 {
-        font-size: 1rem; /* Increase font size slightly */
+        font-size: 1.2rem; /* Increase font size slightly */
         padding: 0;
     }
 
     .cart-icon {
-        margin-right: 15px; /* Add margin to the right to create space from the mobile menu */
+        margin-right: 20px; /* Increase margin to the right to create more space from the mobile menu */
     }
 
     .cart-icon img {
