@@ -102,7 +102,7 @@ nav ul li a:hover {
 }
 
 .product-section h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #2c3e50;
     margin-bottom: 10px;
 }
@@ -114,7 +114,7 @@ nav ul li a:hover {
 }
 
 .description {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #7f8c8d;
     margin-bottom: 20px;
     text-align: center;
@@ -200,7 +200,7 @@ footer p {
     }
 
     .product-section h2 {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     .price {
@@ -208,6 +208,29 @@ footer p {
     }
 
     .description {
-        font-size: 0.9rem;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .container {
+        padding: 60px 30px; /* Increase padding for larger screens */
+    }
+
+    .product-section h2 {
+        font-size: 3rem; /* Increase font size for larger screens */
+    }
+
+    .price {
+        font-size: 2rem; /* Increase font size for larger screens */
+    }
+
+    .description {
+        font-size: 1.5rem; /* Increase font size for larger screens */
+    }
+
+    .cta-button {
+        padding: 20px 40px; /* Increase padding for larger screens */
+        font-size: 1.5rem; /* Increase font size for larger screens */
     }
 }
