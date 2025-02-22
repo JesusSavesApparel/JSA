@@ -252,8 +252,13 @@ footer p {
     }
 
     header h1 {
-        font-size: 1.2rem;
+        font-size: 1rem;
         padding: 5px 0;
+    }
+
+    .cart-icon img {
+        width: 25px;
+        height: 25px;
     }
 
     .container {
