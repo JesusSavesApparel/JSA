@@ -257,12 +257,12 @@ footer p {
     }
 
     header h1 {
-        font-size: 1.5rem; /* Increase font size slightly */
+        font-size: 1.3rem; /* Increase font size slightly */
         padding: 0;
     }
 
     .cart-icon {
-        margin-right: 40px; /* Increase margin to the right to create more space from the mobile menu */
+        margin-right: 30px; /* Increase margin to the right to create more space from the mobile menu */
     }
 
     .cart-icon img {
