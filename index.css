@@ -311,4 +311,38 @@ footer p {
     header h1 {
         text-align: left; /* Align text to the left on larger screens */
     }
+
+    .container {
+        padding: 60px 30px; /* Increase padding for larger screens */
+    }
+
+    .hero h2 {
+        font-size: 3rem; /* Increase font size for larger screens */
+    }
+
+    .hero p {
+        font-size: 1.5rem; /* Increase font size for larger screens */
+    }
+
+    .cta-button {
+        padding: 20px 40px; /* Increase padding for larger screens */
+        font-size: 1.5rem; /* Increase font size for larger screens */
+    }
+
+    .product {
+        padding: 30px; /* Increase padding for larger screens */
+    }
+
+    .product h5 {
+        font-size: 1.5rem; /* Increase font size for larger screens */
+    }
+
+    .product p {
+        font-size: 1.2rem; /* Increase font size for larger screens */
+    }
+
+    .product .cta {
+        padding: 12px 24px; /* Increase padding for larger screens */
+        font-size: 1.2rem; /* Increase font size for larger screens */
+    }
 }
