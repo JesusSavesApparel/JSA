@@ -287,6 +287,7 @@ footer p {
     .cta-button {
         padding: 10px 20px;
         font-size: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add box-shadow */
     }
 
     .product {
@@ -305,6 +306,7 @@ footer p {
     .product .cta {
         padding: 8px 16px;
         font-size: 0.9rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add box-shadow */
     }
 }
 
@@ -328,6 +330,7 @@ footer p {
     .cta-button {
         padding: 20px 40px; /* Increase padding for larger screens */
         font-size: 1.5rem; /* Increase font size for larger screens */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add box-shadow */
     }
 
     .product {
@@ -345,5 +348,6 @@ footer p {
     .product .cta {
         padding: 12px 24px; /* Increase padding for larger screens */
         font-size: 1.2rem; /* Increase font size for larger screens */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add box-shadow */
     }
 }
