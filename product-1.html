@@ -76,9 +76,21 @@
 
         document.addEventListener('DOMContentLoaded', updateCartCount);
 
-        document.getElementById('hamburger-menu').addEventListener('click', function() {
-            document.getElementById('mobile-menu').classList.toggle('show');
-        });
+        document.addEventListener("DOMContentLoaded", function () {
+    const hamburgerMenu = document.querySelector(".hamburger-menu");
+    const mobileMenu = document.querySelector(".mobile-menu");
+
+    hamburgerMenu.addEventListener("click", function () {
+        mobileMenu.classList.toggle("show");
+    });
+
+    // Close the menu when clicking outside
+    document.addEventListener("click", function (event) {
+        if (!hamburgerMenu.contains(event.target) && !mobileMenu.contains(event.target)) {
+            mobileMenu.classList.remove("show");
+        }
+    });
+});
     </script>
 </body>
 
