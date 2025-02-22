@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Jesus Saves Apparel</title>
     <link rel="stylesheet" href="contact.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init('EV5hPUt4GffR2kIre');
+        })();
+    </script>
 </head>
 
 <body>
@@ -44,7 +50,7 @@
 
     <section class="contact-form">
         <h2>Get in Touch</h2>
-        <form action="mailto:jesussavesapparel7@gmail.com" method="post" enctype="text/plain">
+        <form id="contact-form">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
@@ -74,6 +80,17 @@
 
         document.getElementById('hamburger-menu').addEventListener('click', function() {
             document.getElementById('mobile-menu').classList.toggle('show');
+        });
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            emailjs.sendForm('service_eeoq1zm', 'template_dykqwue', this)
+                .then(function() {
+                    alert('Message sent successfully!');
+                }, function(error) {
+                    alert('Failed to send message. Please try again later.');
+                });
         });
     </script>
 </body>
