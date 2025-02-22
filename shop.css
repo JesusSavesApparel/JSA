@@ -75,13 +75,7 @@ nav ul li a:hover {
     font-weight: bold;
 }
 
-.container {
-    padding: 40px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.hero {
+.shop-hero {
     text-align: center;
     margin-bottom: 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow */
@@ -90,46 +84,29 @@ nav ul li a:hover {
     background-color: #ffffff;
 }
 
-.hero h2 {
+.shop-hero h2 {
     font-size: 2.5rem;
     color: #2c3e50;
     margin-bottom: 10px;
 }
 
-.hero p {
+.shop-hero p {
     font-size: 1.2rem;
     color: #7f8c8d;
     margin-bottom: 20px;
 }
 
-.cta-button {
-    display: inline-block;
-    margin: 15px 0;
-    padding: 15px 30px;
-    background-color: #5c6bc0;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-radius: 30px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added shadow */
-    transition: background-color 0.3s ease, transform 0.2s;
-}
-
-.cta-button:hover {
-    background-color: #3949ab;
-    transform: scale(1.05);
-    filter: brightness(1.1);
-}
-
-.product-grid {
+.products {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.product {
+.product-card {
     border: 1px solid #ddd;
     border-radius: 10px;
     overflow: visible;
@@ -141,35 +118,35 @@ nav ul li a:hover {
     max-width: 300px;
 }
 
-.product img {
+.product-card img {
     width: 100%;
     height: auto;
     display: block;
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.product h5 {
+.product-card h3 {
     font-size: 1.3rem;
     margin: 15px 0;
     color: #2c3e50;
 }
 
-.product p {
+.product-card p {
     font-size: 1rem;
     color: #5c6bc0;
 }
 
-.product:hover {
+.product-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Adjusted shadow */
 }
 
-.product img:hover {
+.product-card img:hover {
     transform: scale(1.05);
     filter: brightness(1.1);
 }
 
-.product .cta {
+.product-card button {
     display: inline-block;
     margin: 15px 0;
     padding: 10px 20px;
@@ -181,9 +158,11 @@ nav ul li a:hover {
     border-radius: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added shadow */
     transition: background-color 0.3s ease, transform 0.2s;
+    border: none;
+    cursor: pointer;
 }
 
-.product .cta:hover {
+.product-card button:hover {
     background-color: #3949ab;
     transform: scale(1.05);
     filter: brightness(1.1);
@@ -276,38 +255,32 @@ footer p {
         height: 20px;
     }
 
-    .container {
-        padding: 20px 10px;
-    }
-
-    .hero h2 {
+    .shop-hero h2 {
         font-size: 2rem;
     }
 
-    .hero p {
+    .shop-hero p {
         font-size: 1rem;
     }
 
-    .cta-button {
-        padding: 10px 20px;
-        font-size: 1rem;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added shadow */
+    .products {
+        padding: 20px 10px;
     }
 
-    .product {
+    .product-card {
         max-width: 100%;
         padding: 10px;
     }
 
-    .product h5 {
+    .product-card h3 {
         font-size: 1.1rem;
     }
 
-    .product p {
+    .product-card p {
         font-size: 0.9rem;
     }
 
-    .product .cta {
+    .product-card button {
         padding: 8px 16px;
         font-size: 0.9rem;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added shadow */
@@ -319,37 +292,27 @@ footer p {
         text-align: left; /* Align text to the left on larger screens */
     }
 
-    .container {
-        padding: 60px 30px; /* Increase padding for larger screens */
-    }
-
-    .hero h2 {
+    .shop-hero h2 {
         font-size: 3rem; /* Increase font size for larger screens */
     }
 
-    .hero p {
+    .shop-hero p {
         font-size: 1.5rem; /* Increase font size for larger screens */
     }
 
-    .cta-button {
-        padding: 20px 40px; /* Increase padding for larger screens */
-        font-size: 1.5rem; /* Increase font size for larger screens */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added shadow */
+    .products {
+        padding: 60px 30px; /* Increase padding for larger screens */
     }
 
-    .product {
-        padding: 30px; /* Increase padding for larger screens */
-    }
-
-    .product h5 {
+    .product-card h3 {
         font-size: 1.5rem; /* Increase font size for larger screens */
     }
 
-    .product p {
+    .product-card p {
         font-size: 1.2rem; /* Increase font size for larger screens */
     }
 
-    .product .cta {
+    .product-card button {
         padding: 12px 24px; /* Increase padding for larger screens */
         font-size: 1.2rem; /* Increase font size for larger screens */
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added shadow */
