@@ -4,179 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Lora', serif;
-            color: #1a1a1a;
-            background-color: #faf9f6;
-            line-height: 1.8;
-        }
-
-        header {
-            background: linear-gradient(90deg, #ffffff, #e8e8e8);
-            padding: 10px 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        header h1 {
-            color: #2c3e50;
-            font-size: 2.2rem;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #34495e;
-            font-size: 1rem;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            color: #007acc;
-        }
-
-        .hero {
-            text-align: center;
-            padding: 100px 20px;
-            background: linear-gradient(135deg, #e6f7ff, #f2e6ff);
-            color: #2e4053;
-            clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-        }
-
-        .hero h2 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            color: #1a237e;
-            text-transform: uppercase;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 30px;
-            color: #5c6bc0;
-        }
-
-        .cta-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 15px 40px;
-            background-color: #5c6bc0;
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: bold;
-            border-radius: 30px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease, transform 0.2s;
-        }
-
-        .cta-button:hover {
-            background-color: #3949ab;
-            transform: scale(1.05);
-        }
-
-        footer {
-            background-color: #1a237e;
-            color: #ffffff;
-            text-align: center;
-            padding: 20px 0;
-            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        footer p {
-            margin: 0;
-            font-size: 1rem;
-            font-family: 'Lora', serif;
-        }
-
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #ffffff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-
-        .contact-form h3 {
-            text-align: center;
-            color: #1a237e;
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-
-        .contact-form label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-            color: #34495e;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #d6d6d6;
-            border-radius: 4px;
-            font-size: 1rem;
-        }
-
-        .contact-form textarea {
-            resize: none;
-            height: 150px;
-        }
-
-        .contact-form button {
-            display: inline-block;
-            padding: 10px 40px;
-            background-color: #5c6bc0;
-            color: #ffffff;
-            font-size: 1.2rem;
-            font-weight: bold;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .contact-form button:hover {
-            background-color: #3949ab;
-        }
-    </style>
+    <title>Contact Us - Jesus Saves Apparel</title>
+    <link rel="stylesheet" href="contact.css">
 </head>
 
 <body>
-
     <header>
-        <h1>Contact Us</h1>
+        <h1>Jesus Saves Apparel</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about-us.html">About Us</a></li>
                 <li><a href="shop.html">Shop</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
+            <div class="cart-icon" onclick="window.location.href='cart.html'">
+                <img src="cart.png" alt="Cart">
+                <div class="cart-count" id="cart-count">0</div>
+            </div>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
+        <ul class="mobile-menu" id="mobile-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
     </header>
 
     <section class="hero">
@@ -202,9 +59,23 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 Your Company. All Rights Reserved.</p>
+        <p>&copy; 2024 Jesus Saves Apparel. All Rights Reserved.</p>
     </footer>
 
+    <script src="cart.js"></script>
+    <script>
+        function updateCartCount() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+            document.getElementById('cart-count').textContent = cartCount;
+        }
+
+        document.addEventListener('DOMContentLoaded', updateCartCount);
+
+        document.getElementById('hamburger-menu').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('show');
+        });
+    </script>
 </body>
 
 </html>
