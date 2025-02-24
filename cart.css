@@ -251,6 +251,8 @@ footer p {
 @media (max-width: 768px) {
     header {
         padding: 10px 15px;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     header h1 {
