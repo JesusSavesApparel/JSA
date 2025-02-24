@@ -152,6 +152,7 @@ nav ul li a:hover {
     align-items: center;
     padding: 10px 0;
     border-bottom: 1px solid #ddd;
+    flex-wrap: wrap; /* Allow wrapping for mobile layout */
 }
 
 .cart-item img {
@@ -278,16 +279,28 @@ footer p {
         padding: 10px;
     }
 
+    .cart-item {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .cart-item-price {
+        width: 100%; /* Full width for price */
+        text-align: left; /* Align text to the left */
+        margin-top: 10px; /* Add margin to separate from details */
+    }
+
+    .remove {
+        width: 100%; /* Full width for button */
+        padding: 8px 12px;
+        font-size: 0.875rem;
+        margin-top: 10px; /* Add margin to separate from price */
+    }
+
     .cta {
         width: 100%;
         padding: 10px;
         margin: 10px 0;
-    }
-
-    .remove {
-        padding: 8px 12px;
-        font-size: 0.875rem;
-        margin-top: 5px;
     }
 
     .cta-container {
@@ -315,6 +328,13 @@ footer p {
 
     .cart-total h3 {
         font-size: 2rem; /* Increase font size for larger screens */
+    }
+
+    .remove {
+        width: auto; /* Auto width for button */
+        padding: 8px 16px; /* Adjust padding */
+        font-size: 1rem; /* Adjust font size */
+        margin-top: 0; /* Remove margin */
     }
 
     .cta {
