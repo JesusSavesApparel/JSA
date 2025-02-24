@@ -275,6 +275,15 @@ footer p {
         font-size: 0.875rem;
     }
 
+    .cart-icon {
+        margin-right: 25px; /* Increase margin to the right to create more space from the mobile menu */
+    }
+
+    .cart-icon img {
+        width: 20px;
+        height: 20px;
+    }
+
     .cart-container {
         padding: 10px;
     }
