@@ -19,7 +19,7 @@
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
             <div class="cart-icon" onclick="window.location.href='cart.html'">
-                <img src="cart.png" alt="Cart">
+                <img src="cart-icon.png" alt="Cart">
                 <div class="cart-count" id="cart-count">0</div>
             </div>
             <div class="hamburger-menu" id="hamburger-menu">
@@ -47,7 +47,7 @@
 
         <div class="cart-total">
             <h3>Total</h3>
-            <div class="cart-item-price">$0.00</div>
+            <div class="cart-item-price" id="cart-total-price">$0.00</div>
         </div>
 
         <div class="cta-container">
@@ -57,7 +57,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2024 Jesus Saves Apparel. All Rights Reserved.</p>
+        <p>&copy; 2025 Jesus Saves Apparel. All rights reserved.</p>
     </footer>
 
     <script src="cart.js"></script>
@@ -73,6 +73,60 @@
         document.getElementById('hamburger-menu').addEventListener('click', function() {
             document.getElementById('mobile-menu').classList.toggle('show');
         });
+
+        // Additional script to dynamically update cart items and total price
+        function updateCart() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartItemsContainer = document.getElementById('cart-items');
+            const cartTotalPrice = document.getElementById('cart-total-price');
+            cartItemsContainer.innerHTML = '';
+            let totalPrice = 0;
+
+            cart.forEach(item => {
+                const cartItem = document.createElement('li');
+                cartItem.classList.add('cart-item');
+
+                const itemImage = document.createElement('img');
+                itemImage.src = item.image;
+                itemImage.alt = item.name;
+
+                const itemDetails = document.createElement('div');
+                itemDetails.classList.add('cart-item-details');
+                itemDetails.innerHTML = `<strong>${item.name}</strong><br>Quantity: ${item.quantity}`;
+
+                const itemPrice = document.createElement('div');
+                itemPrice.classList.add('cart-item-price');
+                itemPrice.textContent = `$${(item.price * item.quantity).toFixed(2)}`;
+
+                const removeButton = document.createElement('button');
+                removeButton.classList.add('remove');
+                removeButton.textContent = 'Remove';
+                removeButton.addEventListener('click', () => {
+                    removeFromCart(item.id);
+                });
+
+                cartItem.appendChild(itemImage);
+                cartItem.appendChild(itemDetails);
+                cartItem.appendChild(itemPrice);
+                cartItem.appendChild(removeButton);
+
+                cartItemsContainer.appendChild(cartItem);
+
+                totalPrice += item.price * item.quantity;
+            });
+
+            cartTotalPrice.textContent = `$${totalPrice.toFixed(2)}`;
+        }
+
+        function removeFromCart(itemId) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart = cart.filter(item => item.id !== itemId);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCart();
+            updateCartCount();
+        }
+
+        document.addEventListener('DOMContentLoaded', updateCart);
     </script>
 </body>
 
