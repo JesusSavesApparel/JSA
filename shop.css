@@ -12,7 +12,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increased shadow */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 header h1 {
@@ -75,13 +75,55 @@ nav ul li a:hover {
     font-weight: bold;
 }
 
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+.hamburger-menu span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #34495e;
+    border-radius: 3px;
+}
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    list-style: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.mobile-menu li {
+    margin: 10px 0;
+}
+
+.mobile-menu li a {
+    text-decoration: none;
+    color: #34495e;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
 .shop-hero {
     text-align: center;
     margin-bottom: 40px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     padding: 20px;
     border-radius: 10px;
     background-color: #ffffff;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .shop-hero h2 {
@@ -109,8 +151,8 @@ nav ul li a:hover {
 .product-card {
     border: 1px solid #ddd;
     border-radius: 10px;
-    overflow: visible;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adjusted shadow */
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: #ffffff;
@@ -138,7 +180,7 @@ nav ul li a:hover {
 
 .product-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Adjusted shadow */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
 .product-card img:hover {
@@ -156,7 +198,7 @@ nav ul li a:hover {
     font-size: 1rem;
     font-weight: bold;
     border-radius: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     transition: background-color 0.3s ease, transform 0.2s;
     border: none;
     cursor: pointer;
@@ -173,54 +215,13 @@ footer {
     color: #ffffff;
     text-align: center;
     padding: 20px 0;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Adjusted shadow */
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 footer p {
     margin: 0;
     font-size: 1rem;
     font-family: 'Lora', serif;
-}
-
-.hamburger-menu {
-    display: none;
-    cursor: pointer;
-    flex-direction: column;
-    gap: 5px;
-    width: 30px;
-    height: 30px;
-}
-
-.hamburger-menu span {
-    display: block;
-    height: 3px;
-    width: 100%;
-    background-color: #34495e;
-    border-radius: 3px;
-}
-
-.mobile-menu {
-    display: none;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adjusted shadow */
-    list-style: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    z-index: 1000;
-}
-
-.mobile-menu li {
-    margin: 10px 0;
-}
-
-.mobile-menu li a {
-    text-decoration: none;
-    color: #34495e;
-    font-size: 1rem;
-    font-weight: bold;
 }
 
 @media (max-width: 768px) {
@@ -283,7 +284,7 @@ footer p {
     .product-card button {
         padding: 8px 16px;
         font-size: 0.9rem;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added shadow */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     }
 }
 
@@ -315,6 +316,16 @@ footer p {
     .product-card button {
         padding: 12px 24px; /* Increase padding for larger screens */
         font-size: 1.2rem; /* Increase font size for larger screens */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added shadow */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    }
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
