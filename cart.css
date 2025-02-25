@@ -12,7 +12,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increased shadow */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 header h1 {
@@ -98,7 +98,7 @@ nav ul li a:hover {
     top: 70px;
     right: 20px;
     background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adjusted shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     list-style: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -121,7 +121,7 @@ nav ul li a:hover {
     margin: 20px auto;
     padding: 20px;
     background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     border-radius: 10px;
 }
 
@@ -214,7 +214,7 @@ nav ul li a:hover {
     font-size: 1rem;
     font-weight: bold;
     border-radius: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     transition: background-color 0.3s ease, transform 0.2s;
     text-align: center;
     width: auto;
@@ -239,7 +239,7 @@ footer {
     color: #ffffff;
     text-align: center;
     padding: 20px 0;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Adjusted shadow */
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 footer p {
@@ -349,6 +349,16 @@ footer p {
     .cta {
         padding: 12px 24px; /* Increase padding for larger screens */
         font-size: 1.2rem; /* Increase font size for larger screens */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added shadow */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    }
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
