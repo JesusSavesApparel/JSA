@@ -38,15 +38,25 @@
 
     <div class="container">
         <section class="product-section">
-            <img src="path-to-image1.jpg" alt="Faith Hoodie - Jesus Saves Apparel" class="product-image">
+            <div class="carousel">
+                <button class="carousel-button prev" onclick="prevSlide()">&#10094;</button>
+                <div class="carousel-images">
+                    <img src="Final Designs/JS PBPDPA Black/Front.jpg" alt="Faith Hoodie - Jesus Saves Apparel" class="product-image">
+                    <img src="Final Designs/JS PBPDPA Black/Back.jpg" alt="Faith Hoodie Back - Jesus Saves Apparel" class="product-image">
+                    <img src="Final Designs/JS PBPDPA Black/Side.jpg" alt="Faith Hoodie Side - Jesus Saves Apparel" class="product-image">
+                    <img src="Final Designs/JS PBPDPA Black/Detail.jpg" alt="Faith Hoodie Detail - Jesus Saves Apparel" class="product-image">
+                </div>
+                <button class="carousel-button next" onclick="nextSlide()">&#10095;</button>
+            </div>
             <h2>Faith Hoodie</h2>
             <p class="price">$29.99</p>
             <button class="cta-button add-to-cart" data-id="1" data-name="Faith Hoodie" data-price="29.99">Add to Cart</button>
             <p class="description">Product description goes here. It provides details about the product.</p>
             <div class="selection">
                 <label for="color">Color:</label>
-                <select id="color">
-                    <option value="red">Red</option>
+                <select id="color" onchange="changeColor(this.value)">
+                    <option value="black">Black</option>
+                    <option value="white">White</option>
                     <option value="blue">Blue</option>
                     <option value="green">Green</option>
                 </select>
@@ -77,20 +87,79 @@
         document.addEventListener('DOMContentLoaded', updateCartCount);
 
         document.addEventListener("DOMContentLoaded", function () {
-    const hamburgerMenu = document.querySelector(".hamburger-menu");
-    const mobileMenu = document.querySelector(".mobile-menu");
+            const hamburgerMenu = document.querySelector(".hamburger-menu");
+            const mobileMenu = document.querySelector(".mobile-menu");
 
-    hamburgerMenu.addEventListener("click", function () {
-        mobileMenu.classList.toggle("show");
-    });
+            hamburgerMenu.addEventListener("click", function () {
+                mobileMenu.classList.toggle("show");
+            });
 
-    // Close the menu when clicking outside
-    document.addEventListener("click", function (event) {
-        if (!hamburgerMenu.contains(event.target) && !mobileMenu.contains(event.target)) {
-            mobileMenu.classList.remove("show");
+            // Close the menu when clicking outside
+            document.addEventListener("click", function (event) {
+                if (!hamburgerMenu.contains(event.target) && !mobileMenu.contains(event.target)) {
+                    mobileMenu.classList.remove("show");
+                }
+            });
+        });
+
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-images img');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = i === index ? 'block' : 'none';
+            });
         }
-    });
-});
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showSlide(currentSlide);
+        });
+
+        function changeColor(color) {
+            const colorImages = {
+                black: [
+                    'Final Designs/JS PBPDPA Black/Front.jpg',
+                    'Final Designs/JS PBPDPA Black/Back.jpg',
+                    'Final Designs/JS PBPDPA Black/Side.jpg',
+                    'Final Designs/JS PBPDPA Black/Detail.jpg'
+                ],
+                white: [
+                    'Final Designs/JS PBPDPA White/Front.jpg',
+                    'Final Designs/JS PBPDPA White/Back.jpg',
+                    'Final Designs/JS PBPDPA Red/Side.jpg',
+                    'Final Designs/JS PBPDPA Red/Detail.jpg'
+                ],
+                blue: [
+                    'Final Designs/JS PBPDPA Blue/Front.jpg',
+                    'Final Designs/JS PBPDPA Blue/Back.jpg',
+                    'Final Designs/JS PBPDPA Blue/Side.jpg',
+                    'Final Designs/JS PBPDPA Blue/Detail.jpg'
+                ],
+                green: [
+                    'Final Designs/JS PBPDPA Green/Front.jpg',
+                    'Final Designs/JS PBPDPA Green/Back.jpg',
+                    'Final Designs/JS PBPDPA Green/Side.jpg',
+                    'Final Designs/JS PBPDPA Green/Detail.jpg'
+                ]
+            };
+
+            const images = colorImages[color];
+            slides.forEach((slide, i) => {
+                slide.src = images[i];
+            });
+            currentSlide = 0;
+            showSlide(currentSlide);
+        }
     </script>
 </body>
 
