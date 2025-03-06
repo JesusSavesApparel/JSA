@@ -97,10 +97,42 @@ nav ul li a:hover {
     animation: fadeIn 1s ease-in-out;
 }
 
-.product-image {
-    max-width: 100%;
-    border-radius: 10px;
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
     margin-bottom: 20px;
+}
+
+.carousel-images {
+    display: flex;
+    overflow: hidden;
+}
+
+.carousel-images img {
+    display: none;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
 }
 
 .product-section h2 {
