@@ -1,3 +1,4 @@
+/* General body styles */
 body {
     margin: 0;
     font-family: 'Lora', serif;
@@ -6,6 +7,7 @@ body {
     line-height: 1.6;
 }
 
+/* Header styles */
 header {
     background: linear-gradient(90deg, #ffffff, #e8e8e8);
     padding: 20px 30px;
@@ -50,6 +52,7 @@ nav ul li a:hover {
     color: #007acc;
 }
 
+/* Cart icon styles */
 .cart-icon {
     position: relative;
     display: inline-block;
@@ -75,32 +78,81 @@ nav ul li a:hover {
     font-weight: bold;
 }
 
+/* Container styles */
 .container {
     padding: 40px 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.hero {
-    text-align: center;
-    margin-bottom: 40px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+/* Product section styles */
+.product-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
-    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     animation: fadeIn 1s ease-in-out;
 }
 
-.hero h2 {
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.carousel-images {
+    display: flex;
+    overflow: hidden;
+}
+
+.carousel-images img {
+    display: none;
+    width: 100%;
+    border-radius: 10px;
+    transform: scale(1.2); /* Zoom in the image */
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.product-section h2 {
     font-size: 2.5rem;
     color: #2c3e50;
     margin-bottom: 10px;
 }
 
-.hero p {
+.price {
+    font-size: 1.5rem;
+    color: #e74c3c;
+    margin-bottom: 20px;
+}
+
+.description {
     font-size: 1.2rem;
     color: #7f8c8d;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .cta-button {
@@ -123,73 +175,27 @@ nav ul li a:hover {
     filter: brightness(1.1);
 }
 
-.product-grid {
+/* Selection styles */
+.selection {
+    margin: 10px 0;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    align-items: center;
 }
 
-.product {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: #ffffff;
-    padding: 20px;
-    max-width: 300px;
-}
-
-.product img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.product h5 {
-    font-size: 1.3rem;
-    margin: 15px 0;
-    color: #2c3e50;
-}
-
-.product p {
+.selection label {
+    margin-right: 10px;
     font-size: 1rem;
-    color: #5c6bc0;
+    color: #34495e;
 }
 
-.product:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-}
-
-.product img:hover {
-    transform: scale(1.05);
-    filter: brightness(1.1);
-}
-
-.product .cta {
-    display: inline-block;
-    margin: 15px 0;
-    padding: 10px 20px;
-    background-color: #5c6bc0;
-    color: #ffffff;
-    text-decoration: none;
+.selection select {
+    padding: 10px;
     font-size: 1rem;
-    font-weight: bold;
-    border-radius: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: background-color 0.3s ease, transform 0.2s;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-.product .cta:hover {
-    background-color: #3949ab;
-    transform: scale(1.05);
-    filter: brightness(1.1);
-}
-
+/* Footer styles */
 footer {
     background-color: #1a237e;
     color: #ffffff;
@@ -204,6 +210,7 @@ footer p {
     font-family: 'Lora', serif;
 }
 
+/* Hamburger menu styles */
 .hamburger-menu {
     display: none;
     cursor: pointer;
@@ -221,6 +228,7 @@ footer p {
     border-radius: 3px;
 }
 
+/* Mobile menu styles */
 .mobile-menu {
     display: none;
     position: absolute;
@@ -245,6 +253,7 @@ footer p {
     font-weight: bold;
 }
 
+/* Responsive styles */
 @media (max-width: 768px) {
     nav ul {
         display: none;
@@ -281,37 +290,42 @@ footer p {
         padding: 20px 10px;
     }
 
-    .hero h2 {
+    .product-section {
+        padding: 20px;
+    }
+
+    .product-section h2 {
         font-size: 2rem;
     }
 
-    .hero p {
+    .price {
+        font-size: 1.2rem;
+    }
+
+    .description {
         font-size: 1rem;
     }
 
     .cta-button {
-        padding: 10px 20px;
+        padding: 10px 30px;
         font-size: 1rem;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     }
 
-    .product {
-        max-width: 100%;
-        padding: 10px;
+    .carousel-images img {
+        transform: scale(1.2); /* Zoom in the image */
+        object-fit: cover; /* Ensure the image covers the container */
     }
 
-    .product h5 {
-        font-size: 1.1rem;
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
     }
 
-    .product p {
-        font-size: 0.9rem;
-    }
-
-    .product .cta {
-        padding: 8px 16px;
-        font-size: 0.9rem;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    .product img {
+        width: 100%;
+        height: auto;
+        object-fit: cover; /* Ensure the image covers the container */
     }
 }
 
@@ -324,35 +338,21 @@ footer p {
         padding: 60px 30px; /* Increase padding for larger screens */
     }
 
-    .hero h2 {
+    .product-section h2 {
         font-size: 3rem; /* Increase font size for larger screens */
     }
 
-    .hero p {
+    .price {
+        font-size: 2rem; /* Increase font size for larger screens */
+    }
+
+    .description {
         font-size: 1.5rem; /* Increase font size for larger screens */
     }
 
     .cta-button {
         padding: 20px 40px; /* Increase padding for larger screens */
         font-size: 1.5rem; /* Increase font size for larger screens */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    }
-
-    .product {
-        padding: 30px; /* Increase padding for larger screens */
-    }
-
-    .product h5 {
-        font-size: 1.5rem; /* Increase font size for larger screens */
-    }
-
-    .product p {
-        font-size: 1.2rem; /* Increase font size for larger screens */
-    }
-
-    .product .cta {
-        padding: 12px 24px; /* Increase padding for larger screens */
-        font-size: 1.2rem; /* Increase font size for larger screens */
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     }
 }
