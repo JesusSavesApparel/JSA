@@ -213,6 +213,11 @@ footer p {
         height: 20px;
     }
 
+    .about-hero {
+        background: none; /* Remove background effect for mobile devices */
+        box-shadow: none; /* Remove shadow for mobile devices */
+    }
+
     .about-hero h2 {
         font-size: 2rem;
     }
