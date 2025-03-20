@@ -41,8 +41,8 @@
             <div class="carousel">
                 <button class="carousel-button prev" onclick="prevSlide()">&#10094;</button>
                 <div class="carousel-images">
-                    <img src="Final Designs/Power in the name of Jesus/Front.jpg" alt="Faith Hoodie - Jesus Saves Apparel" class="product-image">
-                    <img src="Final Designs/Power in the name of Jesus/Back.jpg" alt="Faith Hoodie Back - Jesus Saves Apparel" class="product-image">
+                    <img src="Final Designs/JS PBPDPA Black/Front.jpg" alt="Faith Hoodie - Jesus Saves Apparel" class="product-image">
+                    <img src="Final Designs/JS PBPDPA Black/Back.jpg" alt="Faith Hoodie Back - Jesus Saves Apparel" class="product-image">
                     <img src="Final Designs/JS PBPDPA Black/Side.jpg" alt="Faith Hoodie Side - Jesus Saves Apparel" class="product-image">
                     <img src="Final Designs/JS PBPDPA Black/Detail.jpg" alt="Faith Hoodie Detail - Jesus Saves Apparel" class="product-image">
                 </div>
@@ -69,72 +69,6 @@
                     <option value="large">Large</option>
                 </select>
             </div>
-            
-            <!-- PayFast Form Below the Product Section -->
-            <form onsubmit="return actionPayFastJavascript(this);" name="PayFastPayNowForm" action="https://payment.payfast.io/eng/process" method="post">
-                <input required type="hidden" name="cmd" value="_paynow">
-                <input required type="hidden" name="receiver" pattern="[0-9]" value="26732287">
-                <input type="hidden" name="return_url" value="https://jesussavesapparel.github.io/JSA/">
-                <input type="hidden" name="cancel_url" value="https://jesussavesapparel.github.io/JSA/">
-                <input required type="hidden" name="amount" value="29.99">
-                <table>
-                    <tr>
-                        <td><label for="custom_quantity">Quantity: </label></td>
-                        <td><input required id="custom_quantity" type="number" name="custom_quantity" value="1"></td>
-                    </tr>
-                </table>
-
-                <input required type="hidden" name="item_name" maxlength="255" value="Faith Hoodie">
-                <input type="hidden" name="item_description" maxlength="255" value="Faith Hoodie (Testing)">
-                <table>
-                    <tr>
-                        <td colspan="2"><span style="font-weight: bold;">Shipping Address</span></td>
-                    </tr>
-                    <tr>
-                        <td><span style="color:red;">*</span>&nbsp;Line 1</td>
-                        <td><input type="text" name="line1" class="shipping" value=""></td>
-                    </tr>
-                    <tr>
-                        <td>Line 2</td>
-                        <td><input type="text" name="line2" class="shipping" value=""></td>
-                    </tr>
-                    <tr>
-                        <td><span style="color:red;">*</span>&nbsp;City</td>
-                        <td><input type="text" class="shipping" name="city" value=""></td>
-                    </tr>
-                    <tr>
-                        <td><span style="color:red;">*</span>&nbsp;Province</td>
-                        <td><input type="text" class="shipping" name="region" value=""></td>
-                    </tr>
-                    <tr>
-                        <td><span style="color:red;">*</span>&nbsp;Country</td>
-                        <td>
-                            <select name="country" class="shipping">
-                                <option value="" selected="selected">- Select -</option>
-                                <option value="South Africa">South Africa</option>
-                                <option value="Botswana">Botswana</option>
-                                <option value="Lesotho">Lesotho</option>
-                                <option value="Mauritius">Mauritius</option>
-                                <option value="Mozambique">Mozambique</option>
-                                <option value="Swaziland">Swaziland</option>
-                                <option value="Zimbabwe">Zimbabwe</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><span style="color:red;">*</span>&nbsp;Postal Code</td>
-                        <td><input type="number" name="code" class="shipping" value=""></td>
-                    </tr>
-                </table>
-                <table>
-                    <tr>
-                        <td colspan=2 align="center">
-                            <input type="image" src="https://my.payfast.io/images/buttons/BuyNow/Light-Large-BuyNow.png" alt="Buy Now" title="Buy Now with Payfast">
-                        </td>
-                    </tr>
-                </table>
-            </form>
-            <!-- End of PayFast Form -->
         </section>
     </div>
 
