@@ -283,12 +283,17 @@ footer p {
     }
 
     .category-grid {
-        flex-direction: column;
-        gap: 20px;
+        flex-direction: row; /* Ensure categories are in a row */
+        gap: 10px; /* Reduce gap between categories */
     }
 
     .category {
-        height: 200px; /* Adjust height for mobile devices */
+        flex: 1 1 calc(50% - 10px); /* Ensure categories fit next to each other */
+        height: 150px; /* Adjust height for mobile devices */
+    }
+
+    .category h3, .category p {
+        font-size: 1rem; /* Reduce font size for mobile devices */
     }
 }
 
