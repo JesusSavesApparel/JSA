@@ -126,6 +126,12 @@ nav ul li a:hover {
     padding: 10px;
     cursor: pointer;
     border-radius: 50%;
+    transition: background-color 0.3s ease;
+    font-size: 1.5rem;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .carousel-button.prev {
