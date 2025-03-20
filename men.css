@@ -142,7 +142,7 @@ nav ul li a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 10px; /* Reduce gap between products */
     padding: 40px 20px;
     max-width: 1200px;
     margin: 0 auto;
@@ -274,8 +274,8 @@ footer p {
     }
 
     .product-card {
-        flex: 1 1 calc(50% - 10px); /* Ensure products fit next to each other */
-        max-width: calc(50% - 10px); /* Ensure products fit next to each other */
+        flex: 1 1 calc(50% - 5px); /* Ensure products fit next to each other */
+        max-width: calc(50% - 5px); /* Ensure products fit next to each other */
         padding: 10px;
     }
 
