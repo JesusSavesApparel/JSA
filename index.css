@@ -166,6 +166,10 @@ nav ul li a:hover {
     z-index: 0;
 }
 
+.category.mens img {
+    object-position: top; /* Move the men's category image up */
+}
+
 .category h3, .category p {
     position: relative;
     z-index: 1;
@@ -289,7 +293,7 @@ footer p {
 
     .category {
         flex: 1 1 calc(50% - 10px); /* Ensure categories fit next to each other */
-        height: 150px; /* Adjust height for mobile devices */
+        height: 200px; /* Increase height for mobile devices */
     }
 
     .category h3, .category p {
