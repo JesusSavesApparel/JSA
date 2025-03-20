@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Category - Jesus Saves Apparel</title>
+    <link rel="stylesheet" href="men.css">
+</head>
+
+<body>
+    <header>
+        <h1>Jesus Saves Apparel</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="cart-icon" onclick="window.location.href='cart.html'">
+                <img src="cart.png" alt="Cart">
+                <div class="cart-count" id="cart-count">0</div>
+            </div>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <ul class="mobile-menu" id="mobile-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </header>
+
+    <div class="shop-hero">
+        <h2>Men's Category</h2>
+        <p>Explore faith-inspired designs crafted with love and purpose for men.</p>
+    </div>
+
+    <div class="products">
+        <div class="product-card" onclick="window.location.href='product-1.html'">
+            <img src="Final Designs/Power in the name of Jesus/Front.jpg" alt="Product 1" class="front">
+            <img src="Final Designs/Power in the name of Jesus/Back.jpg" alt="Product 1 Back" class="back">
+            <h3>Grace Tee</h3>
+            <p>$24.99</p>
+        </div>
+        <div class="product-card" onclick="window.location.href='product-2.html'">
+            <img src="product2.jpg" alt="Product 2" class="front">
+            <img src="product2-back.jpg" alt="Product 2 Back" class="back">
+            <h3>Faith Hoodie</h3>
+            <p>$39.99</p>
+        </div>
+        <div class="product-card" onclick="window.location.href='product-3.html'">
+            <img src="product3.jpg" alt="Product 3" class="front">
+            <img src="product3-back.jpg" alt="Product 3 Back" class="back">
+            <h3>Hope Cap</h3>
+            <p>$19.99</p>
+        </div>
+        <div class="product-card" onclick="window.location.href='product-4.html'">
+            <img src="product4.jpg" alt="Product 4" class="front">
+            <img src="product4-back.jpg" alt="Product 4 Back" class="back">
+            <h3>Love Crewneck</h3>
+            <p>$34.99</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Jesus Saves Apparel. All Rights Reserved.</p>
+    </footer>
+
+    <script src="cart.js"></script>
+    <script>
+        function updateCartCount() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+            document.getElementById('cart-count').textContent = cartCount;
+        }
+
+        document.addEventListener('DOMContentLoaded', updateCartCount);
+
+        document.getElementById('hamburger-menu').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('show');
+        });
+
+        function switchImage(element) {
+            const frontImage = element.querySelector('.front');
+            const backImage = element.querySelector('.back');
+            if (frontImage.style.display === 'none') {
+                frontImage.style.display = 'block';
+                backImage.style.display = 'none';
+            } else {
+                frontImage.style.display = 'none';
+                backImage.style.display = 'block';
+            }
+        }
+
+        function startSlideshow() {
+            const productCards = document.querySelectorAll('.product-card');
+            productCards.forEach(card => {
+                setInterval(() => {
+                    switchImage(card);
+                }, 3000); // Change image every 3 seconds
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', startSlideshow);
+    </script>
+</body>
+
+</html>
