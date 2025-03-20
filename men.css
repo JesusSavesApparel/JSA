@@ -275,7 +275,7 @@ footer p {
 
     .product-card {
         flex: 1 1 calc(50% - 10px); /* Ensure products fit next to each other */
-        max-width: 100%;
+        max-width: calc(50% - 10px); /* Ensure products fit next to each other */
         padding: 10px;
     }
 
