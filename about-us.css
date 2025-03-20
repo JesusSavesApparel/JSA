@@ -205,7 +205,7 @@ footer p {
     }
 
     .cart-icon {
-        margin-right: 25px; /* Increase margin to the right to create more space from the mobile menu */
+        margin-right: 15px; /* Reduce margin to the right */
     }
 
     .cart-icon img {
@@ -216,6 +216,7 @@ footer p {
     .about-hero {
         background: none; /* Remove background effect for mobile devices */
         box-shadow: none; /* Remove shadow for mobile devices */
+        padding: 50px 10px; /* Reduce padding */
     }
 
     .about-hero h2 {
@@ -227,7 +228,7 @@ footer p {
     }
 
     .content {
-        padding: 20px 10px;
+        padding: 10px 5px; /* Reduce padding */
     }
 
     .content img {
