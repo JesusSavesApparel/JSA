@@ -199,7 +199,7 @@ footer p {
     }
 
     header h1 {
-        font-size: 1.2rem; /* Increase font size slightly */
+        font-size: 1.2rem; /* Decrease font size slightly */
         padding: 0;
         text-align: left; /* Align text to the left */
     }
