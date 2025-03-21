@@ -157,8 +157,7 @@ nav ul li a:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: #ffffff;
     padding: 20px;
-    flex: 1 1 calc(33.333% - 20px); /* Adjust flex settings to ensure products fit next to each other */
-    max-width: calc(33.333% - 20px); /* Adjust max-width to ensure products fit next to each other */
+    max-width: 300px;
     position: relative;
 }
 
@@ -278,10 +277,9 @@ footer p {
     }
 
     .product-card {
-        flex: 1 1 calc(50% - 20px); /* Ensure products fit next to each other with proper spacing */
-        max-width: calc(50% - 20px); /* Ensure products fit next to each other with proper spacing */
-        box-sizing: border-box;
-        margin: 10px; /* Add margin to create space between products */
+        flex: 1 1 50%; /* Ensure products fit next to each other */
+        max-width: 50%; /* Ensure products fit next to each other */
+        padding: 10px;
     }
 
     .product-card h3 {
