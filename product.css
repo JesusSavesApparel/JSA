@@ -284,7 +284,7 @@ footer p {
     }
 
     .cart-icon {
-        margin-right: 25px; /* Increase margin to the right to create more space from the mobile menu */
+        margin-right: 15px; /* Decrease margin to the right to reduce space */
     }
 
     .cart-icon img {
@@ -293,11 +293,11 @@ footer p {
     }
 
     .container {
-        padding: 20px 10px;
+        padding: 10px 5px; /* Reduce padding for mobile devices */
     }
 
     .product-section {
-        padding: 20px;
+        padding: 10px; /* Reduce padding for mobile devices */
     }
 
     .product-section h2 {
@@ -313,7 +313,7 @@ footer p {
     }
 
     .cta-button {
-        padding: 10px 30px;
+        padding: 10px 20px; /* Reduce padding for mobile devices */
         font-size: 1rem;
     }
 
@@ -322,7 +322,6 @@ footer p {
         object-fit: cover; /* Ensure the image covers the container */
     }
 }
-
 @media (min-width: 769px) {
     header h1 {
         text-align: left; /* Align text to the left on larger screens */
