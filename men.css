@@ -273,13 +273,13 @@ footer p {
         padding: 20px 10px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
     }
 
     .product-card {
-        flex: 1 1 calc(50% - 10px); /* Ensure products fit next to each other */
-        max-width: calc(50% - 10px); /* Ensure products fit next to each other */
-        padding: 10px;
+        flex: 1 1 50%; /* Ensure products fit next to each other */
+        max-width: 50%; /* Ensure products fit next to each other */
+        box-sizing:border-box;
     }
 
     .product-card h3 {
