@@ -277,8 +277,8 @@ footer p {
     }
 
     .product-card {
-        flex: 1 1 calc(50% - 10px); /* Increase size to ensure products fit next to each other */
-        max-width: calc(50% - 10px); /* Increase size to ensure products fit next to each other */
+        flex: 1 1 calc(50% - 10px); /* Ensure products fit next to each other */
+        max-width: calc(50% - 10px); /* Ensure products fit next to each other */
         padding: 10px;
     }
 
@@ -296,7 +296,6 @@ footer p {
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     }
 }
-
 @media (min-width: 769px) {
     header h1 {
         text-align: left; /* Align text to the left on larger screens */
