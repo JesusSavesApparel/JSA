@@ -20,7 +20,7 @@ header {
 header h1 {
     color: #2c3e50;
     font-size: 2.5rem;
-    font-weight: normal; /* Ensure the font weight is normal */
+    font-weight: bold;
     letter-spacing: 2px;
 }
 
@@ -57,6 +57,8 @@ nav ul li a:hover {
     position: relative;
     display: inline-block;
     cursor: pointer;
+    margin-left: 20px;
+    margin-right: 20px; /* Increase margin to the right to create more space from the mobile menu */
 }
 
 .cart-icon img {
@@ -74,6 +76,55 @@ nav ul li a:hover {
     padding: 2px 6px;
     font-size: 0.7rem;
     font-weight: bold;
+}
+
+/* About hero section styles */
+.about-hero {
+    text-align: center;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.about-hero h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.about-hero p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+}
+
+/* Content styles */
+.content {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content p {
+    margin-bottom: 20px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #1a237e;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+    font-family: 'Lora', serif;
 }
 
 /* Hamburger menu styles */
@@ -119,62 +170,6 @@ nav ul li a:hover {
     font-weight: bold;
 }
 
-/* About Hero Section */
-.about-hero {
-    text-align: center;
-    margin-bottom: 40px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #ffffff;
-    animation: fadeIn 1s ease-in-out;
-}
-
-.about-hero h2 {
-    font-size: 2.5rem;
-    color: #2c3e50;
-    margin-bottom: 10px;
-}
-
-.about-hero p {
-    font-size: 1.2rem;
-    color: #7f8c8d;
-    margin-bottom: 20px;
-}
-
-/* Content styles */
-.content {
-    padding: 40px 20px;
-    max-width: 800px;
-    margin: 0 auto;
-    color: #2c3e50;
-    text-align: justify;
-    font-size: 1.2rem;
-}
-
-.content img {
-    width: 100%;
-    height: auto;
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
-
-/* Footer styles */
-footer {
-    background-color: #1a237e;
-    color: #ffffff;
-    text-align: center;
-    padding: 20px 0;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
-
-footer p {
-    margin: 0;
-    font-size: 1rem;
-    font-family: 'Lora', serif;
-}
-
 /* Responsive styles */
 @media (max-width: 768px) {
     nav ul {
@@ -195,7 +190,6 @@ footer p {
 
     header h1 {
         font-size: 1.2rem; /* Increase font size slightly */
-        font-weight: normal; /* Ensure the font weight is normal */
         padding: 0;
         text-align: left; /* Align text to the left */
     }
@@ -209,20 +203,16 @@ footer p {
         height: 20px;
     }
 
+    .content {
+        padding: 20px 10px;
+    }
+
     .about-hero h2 {
         font-size: 2rem;
     }
 
     .about-hero p {
         font-size: 1rem;
-    }
-
-    .content {
-        padding: 20px 10px;
-    }
-
-    .content img {
-        margin: 10px 0;
     }
 }
 
