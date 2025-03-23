@@ -14,7 +14,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 header h1 {
@@ -44,7 +44,7 @@ nav ul li a {
     text-decoration: none;
     color: #34495e;
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: bold; /* Make header words bold */
     transition: color 0.3s ease;
 }
 
@@ -57,6 +57,8 @@ nav ul li a:hover {
     position: relative;
     display: inline-block;
     cursor: pointer;
+    margin-left: 20px; /* Add margin to the left to create space from the tabs */
+    margin-right: 20px; /* Increase margin to the right to create more space from the mobile menu */
 }
 
 .cart-icon img {
@@ -194,9 +196,10 @@ footer p {
     }
 
     header h1 {
-        font-size: 1.2rem;
+        font-size: 1.2rem; /* Increase font size slightly */
+        font-weight: normal; /* Ensure the font weight is normal */
         padding: 0;
-        text-align: left;
+        text-align: left; /* Align text to the left */
     }
 
     .cart-icon {
