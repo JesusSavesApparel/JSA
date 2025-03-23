@@ -124,27 +124,24 @@ nav ul li a:hover {
 /* About Hero Section */
 .about-hero {
     text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(135deg, #e6f7ff, #f2e6ff);
-    color: #2e4053;
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    margin-bottom: 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px;
     border-radius: 10px;
+    background-color: #ffffff;
     animation: fadeIn 1s ease-in-out;
 }
 
 .about-hero h2 {
     font-size: 2.5rem;
-    margin-bottom: 20px;
     color: #2c3e50;
-    text-transform: uppercase;
-    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
 }
 
 .about-hero p {
     font-size: 1.2rem;
-    margin-bottom: 30px;
     color: #7f8c8d;
+    margin-bottom: 20px;
 }
 
 /* Content styles */
@@ -213,12 +210,6 @@ footer p {
         height: 20px;
     }
 
-    .about-hero {
-        background: none; /* Remove background effect for mobile devices */
-        box-shadow: none; /* Remove shadow for mobile devices */
-        padding: 50px 10px; /* Reduce padding */
-    }
-
     .about-hero h2 {
         font-size: 2rem;
     }
@@ -228,7 +219,7 @@ footer p {
     }
 
     .content {
-        padding: 10px 5px; /* Reduce padding */
+        padding: 20px 10px;
     }
 
     .content img {
