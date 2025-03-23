@@ -197,7 +197,7 @@ footer p {
 
     header h1 {
         font-size: 1.2rem; /* Increase font size slightly */
-        font-weight: normal; /* Ensure the font weight is normal */
+        font-weight: bold; /* Ensure the font weight is bold */
         padding: 0;
         text-align: left; /* Align text to the left */
     }
