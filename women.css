@@ -159,6 +159,7 @@ nav ul li a:hover {
     padding: 20px;
     max-width: 300px;
     position: relative;
+    cursor: pointer;
 }
 
 .product-card img {
@@ -189,28 +190,6 @@ nav ul li a:hover {
 }
 
 .product-card img:hover {
-    transform: scale(1.05);
-    filter: brightness(1.1);
-}
-
-.product-card button {
-    display: inline-block;
-    margin: 15px 0;
-    padding: 10px 20px;
-    background-color: #5c6bc0;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: background-color 0.3s ease, transform 0.2s;
-    border: none;
-    cursor: pointer;
-}
-
-.product-card button:hover {
-    background-color: #3949ab;
     transform: scale(1.05);
     filter: brightness(1.1);
 }
@@ -284,17 +263,11 @@ footer p {
     }
 
     .product-card h3 {
-        font-size: 1.3rem; /* Increase font size */
+        font-size: 1.1rem;
     }
 
     .product-card p {
-        font-size: 1rem; /* Increase font size */
-    }
-
-    .product-card button {
-        padding: 10px 20px; /* Increase padding */
-        font-size: 1rem; /* Increase font size */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        font-size: 0.9rem;
     }
 }
 
@@ -321,12 +294,6 @@ footer p {
 
     .product-card p {
         font-size: 1.2rem; /* Increase font size for larger screens */
-    }
-
-    .product-card button {
-        padding: 12px 24px; /* Increase padding for larger screens */
-        font-size: 1.2rem; /* Increase font size for larger screens */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     }
 }
 
