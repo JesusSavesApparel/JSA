@@ -20,7 +20,7 @@ header {
 header h1 {
     color: #2c3e50;
     font-size: 2.5rem;
-    font-weight: normal; /* Ensure the font weight is normal */
+    font-weight: bold;
     letter-spacing: 2px;
 }
 
