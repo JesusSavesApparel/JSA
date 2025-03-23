@@ -20,7 +20,7 @@ header {
 header h1 {
     color: #2c3e50;
     font-size: 2.5rem;
-    font-weight: normal; /* Ensure the font weight is normal */
+    font-weight: bold;
     letter-spacing: 2px;
 }
 
@@ -120,7 +120,7 @@ nav ul li a:hover {
 }
 
 /* About Hero Section */
-.about-hero {
+.hero {
     text-align: center;
     margin-bottom: 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
@@ -194,8 +194,7 @@ footer p {
     }
 
     header h1 {
-        font-size: 1.2rem; /* Ensure the font size is the same as in index.css */
-        font-weight: normal; /* Ensure the font weight is normal */
+        font-size: 1.2rem; /* Increase font size slightly */
         padding: 0;
         text-align: left; /* Align text to the left */
     }
