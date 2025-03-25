@@ -258,8 +258,8 @@ footer p {
     }
 
     .product-card {
-        flex: 1 1 calc(100% - 10px); /* Ensure products fit next to each other */
-        max-width: calc(100% - 10px); /* Ensure products fit next to each other */
+        flex: 1 1 calc(48% - 10px); /* Ensure products fit next to each other */
+        max-width: calc(48% - 10px); /* Ensure products fit next to each other */
         padding: 10px;
         box-sizing: border-box; /* Ensure padding is included in the width calculation */
     }
