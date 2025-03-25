@@ -157,7 +157,7 @@ nav ul li a:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: #ffffff;
     padding: 20px;
-    max-width: calc(50% - 10px); /* Increase max-width for larger product previews */
+    max-width: calc(48% - 10px); /* Increase max-width for larger product previews */
     position: relative;
     cursor: pointer;
     box-sizing: border-box; /* Ensure padding is included in the width calculation */
@@ -176,7 +176,7 @@ nav ul li a:hover {
 
 .product-card h3 {
     font-size: 1.5rem; /* Increase font size */
-    margin: 10px 0; /* Reduce margin to bring name closer to price */
+    margin: 5px 0; /* Reduce margin to bring name closer to price */
     color: #2c3e50;
 }
 
@@ -258,18 +258,25 @@ footer p {
     }
 
     .product-card {
-        flex: 1 1 calc(50% - 10px); /* Ensure products fit next to each other */
-        max-width: calc(50% - 10px); /* Ensure products fit next to each other */
+        flex: 1 1 calc(100% - 10px); /* Ensure products fit next to each other */
+        max-width: calc(100% - 10px); /* Ensure products fit next to each other */
         padding: 10px;
         box-sizing: border-box; /* Ensure padding is included in the width calculation */
     }
 
+    .product-card img {
+        width: 100%;
+        height: auto;
+    }
+
     .product-card h3 {
-        font-size: 1.3rem; /* Increase font size */
+        font-size: 1.5rem; /* Increase font size */
+        margin: 5px 0; /* Reduce margin to bring name closer to price */
     }
 
     .product-card p {
-        font-size: 1rem; /* Increase font size */
+        font-size: 1.2rem; /* Increase font size */
+        margin-top: 5px; /* Reduce margin to bring price closer to name */
     }
 }
 
