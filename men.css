@@ -303,12 +303,17 @@ footer p {
         padding: 60px 30px; /* Increase padding for larger screens */
     }
 
+    .product-card {
+        max-width: 300px; /* Normal size for larger screens */
+        padding: 20px; /* Add padding back for larger screens */
+    }
+
     .product-card h3 {
-        font-size: 1.7rem; /* Increase font size for larger screens */
+        font-size: 1.5rem; /* Increase font size for larger screens */
     }
 
     .product-card p {
-        font-size: 1.4rem; /* Increase font size for larger screens */
+        font-size: 1.2rem; /* Increase font size for larger screens */
     }
 
     .product-card button {
