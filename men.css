@@ -142,7 +142,7 @@ nav ul li a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 20px; /* Increase gap between products */
+    gap: 10px; /* Reduce gap between products */
     padding: 40px 20px;
     max-width: 1200px;
     margin: 0 auto;
@@ -175,13 +175,13 @@ nav ul li a:hover {
 }
 
 .product-card h3 {
-    font-size: 1.5rem; /* Increase font size */
+    font-size: 1.3rem; /* Decrease font size */
     margin: 5px 0; /* Reduce margin to bring name closer to price */
     color: #2c3e50;
 }
 
 .product-card p {
-    font-size: 1.2rem; /* Increase font size */
+    font-size: 1rem; /* Decrease font size */
     color: #5c6bc0;
     margin-top: 5px; /* Reduce margin to bring price closer to name */
 }
@@ -258,8 +258,8 @@ footer p {
     }
 
     .product-card {
-        flex: 1 1 calc(48% - 10px); /* Ensure products fit next to each other */
-        max-width: calc(48% - 10px); /* Ensure products fit next to each other */
+        flex: 1 1 calc(100% - 20px); /* Increase width to take up more space */
+        max-width: calc(100% - 20px); /* Increase width to take up more space */
         padding: 0; /* Remove padding to make the image take up the whole upper part */
         box-sizing: border-box; /* Ensure padding is included in the width calculation */
     }
@@ -270,13 +270,19 @@ footer p {
     }
 
     .product-card h3 {
-        font-size: 1.5rem; /* Increase font size */
+        font-size: 1.3rem; /* Decrease font size */
         margin: 5px 0; /* Reduce margin to bring name closer to price */
     }
 
     .product-card p {
-        font-size: 1.2rem; /* Increase font size */
+        font-size: 1rem; /* Decrease font size */
         margin-top: 5px; /* Reduce margin to bring price closer to name */
+    }
+
+    .product-card button {
+        padding: 10px 20px; /* Increase padding */
+        font-size: 1rem; /* Increase font size */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     }
 }
 
@@ -295,14 +301,26 @@ footer p {
 
     .products {
         padding: 60px 30px; /* Increase padding for larger screens */
+        gap: 10px; /* Reduce gap between products */
+    }
+
+    .product-card {
+        max-width: 200px; /* Smaller size for larger screens */
+        padding: 10px; /* Reduce padding for larger screens */
     }
 
     .product-card h3 {
-        font-size: 1.7rem; /* Increase font size for larger screens */
+        font-size: 1.3rem; /* Decrease font size for larger screens */
     }
 
     .product-card p {
-        font-size: 1.4rem; /* Increase font size for larger screens */
+        font-size: 1rem; /* Decrease font size for larger screens */
+    }
+
+    .product-card button {
+        padding: 10px 20px; /* Reduce padding for larger screens */
+        font-size: 1rem; /* Decrease font size for larger screens */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     }
 }
 
