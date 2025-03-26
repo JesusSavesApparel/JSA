@@ -298,7 +298,7 @@ footer p {
     }
 
     .product-card {
-        max-width: calc(25% - 10px); /* Smaller size for larger screens */
+        max-width: calc(30% - 10px); /* Smaller size for larger screens */
         padding: 10px; /* Reduce padding for larger screens */
     }
 
